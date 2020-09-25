@@ -10,7 +10,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 import '../ui/views/credits/credits_view.dart';
-import '../ui/views/home/home_viewmodel.dart';
+import '../ui/views/home/home_view.dart';
 
 class Routes {
   static const String homeView = '/';

@@ -1,19 +1,16 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_demo/ui/views/home/home_view.dart';
 import 'package:stacked/stacked.dart';
+import 'package:stacked_services/stacked_services.dart';
 
-class HomeView extends StatelessWidget {
-  const HomeView({Key key}) : super(key: key);
+import 'package:flutter_demo/app/router.gr.dart';
+import 'package:flutter_demo/app/locator.dart';
 
-  @override
-  Widget build(BuildContext context) {
-    return ViewModelBuilder<HomeViewModel>.reactive(
-      builder: (context, model, child) => Scaffold(
-        body: Center(
-          child: Text(model.title),
-        ),
-      ),
-      viewModelBuilder: () => HomeViewModel(),
-    );
+class HomeViewModel extends BaseViewModel {
+  final NavigationService _navigationService = locator<NavigationService>();
+
+  String _title = 'My app';
+  String get title => _title;
+
+  Future navigateToHome() async {
+    await _navigationService.navigateTo(Routes.creditsView);
   }
 }

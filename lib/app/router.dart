@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route_annotations.dart';
 
 import 'package:flutter_demo/ui/views/credits/credits_view.dart';
-import 'package:flutter_demo/ui/views/home/home_viewmodel.dart';
+import 'package:flutter_demo/ui/views/home/home_view.dart';
 
 @MaterialAutoRouter(
   routes: <AutoRoute>[
