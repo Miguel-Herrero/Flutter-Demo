@@ -4,7 +4,7 @@ import 'package:stacked_services/stacked_services.dart';
 import 'package:flutter_demo/app/router.gr.dart';
 import 'package:flutter_demo/app/locator.dart';
 
-class HomeViewModel extends BaseViewModel {
+class HomeViewModel extends IndexTrackingViewModel {
   final NavigationService _navigationService = locator<NavigationService>();
 
   String _title = 'My app';

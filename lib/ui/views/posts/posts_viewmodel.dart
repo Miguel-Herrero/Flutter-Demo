@@ -2,7 +2,7 @@ import 'package:injectable/injectable.dart';
 import 'package:stacked/stacked.dart';
 
 @singleton
-class CreditsViewModel extends BaseViewModel {
-  String _title = 'Credits page';
+class PostsViewModel extends BaseViewModel {
+  String _title = 'Posts';
   String get title => _title;
 }
