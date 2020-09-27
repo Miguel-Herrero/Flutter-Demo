@@ -5,7 +5,7 @@ import 'package:flutter_demo/app/locator.dart';
 import 'package:flutter_demo/app/router.gr.dart';
 
 void main() {
-  setupLocator();
+  setupLocator(Env.fake);
   runApp(MyApp());
 }
 
