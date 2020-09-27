@@ -6,7 +6,7 @@ import 'package:flutter_demo/app/locator.dart';
 import 'package:flutter_demo/datamodels/post.dart';
 import 'package:flutter_demo/services/api.dart';
 
-@LazySingleton(as: Api, env: [Env.prod, Env.dev, Env.test])
+@LazySingleton(as: Api, env: [Env.prod, Env.dev])
 class HttpApi implements Api {
   HttpApi() {
     print('Using HttpApi service');
