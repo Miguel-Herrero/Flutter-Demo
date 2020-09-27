@@ -4,7 +4,7 @@ import 'package:stacked_services/stacked_services.dart';
 import 'package:flutter_demo/app/locator.dart';
 import 'package:flutter_demo/app/router.gr.dart';
 
-void main() async {
+void main() {
   setupLocator(Env.fake);
   runApp(MyApp());
 }
