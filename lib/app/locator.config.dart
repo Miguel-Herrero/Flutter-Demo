@@ -17,10 +17,9 @@ import '../ui/views/posts/posts_viewmodel.dart';
 import '../services/third_party_services_module.dart';
 
 /// Environment names
+const _fake = 'fake';
 const _prod = 'prod';
 const _dev = 'dev';
-const _test = 'test';
-const _fake = 'fake';
 
 /// adds generated dependencies
 /// to the provided [GetIt] instance
@@ -32,8 +31,8 @@ GetIt $initGetIt(
 }) {
   final gh = GetItHelper(get, environment, environmentFilter);
   final thirdPartyServicesModule = _$ThirdPartyServicesModule();
-  gh.lazySingleton<Api>(() => HttpApi(), registerFor: {_prod, _dev, _test});
   gh.lazySingleton<Api>(() => FakeApi(), registerFor: {_fake});
+  gh.lazySingleton<Api>(() => HttpApi(), registerFor: {_prod, _dev});
   gh.lazySingleton<DialogService>(() => thirdPartyServicesModule.dialogService);
   gh.lazySingleton<NavigationService>(
       () => thirdPartyServicesModule.navigationService);
